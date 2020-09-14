@@ -1,3 +1,11 @@
+/*
+Router : 경로설정
+spring : cONTROLLER 클래스로 선언
+spring에서 Controller가 하는일과 유사한 기능을 수행한다.
+client가 
+
+
+*/
 var express = require('express');
 const { route } = require('./users');
 var router = express.Router();
@@ -19,7 +27,7 @@ router.get('/', function(req, res, next) {
 });
 
 // localhost:3000/home 으로 요청을 하면
-router.get("/home",function(req,res){
+router.get("/home/index",function(req,res){
   // 순수한 문자열을 client에게 전달하라
   res.send("노옹농이!!")
 });
@@ -55,7 +63,6 @@ router.get("/add/:num1/:num2",function(req,res){
 router.post("/input",function(req,res){
   let m_user = req.body.m_user;
   res.send("전송된 user : " + m_user);
-
 
 });
 
