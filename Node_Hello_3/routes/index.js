@@ -7,6 +7,7 @@ router.get("/", function (req, res, next) {
   res.render("index", {
     title: "반갑습니다",
     date: moment(new Date()).format("YYYY-MM-DD"),
+    time: moment(new Date()).format("HH:mm:ss"),
   });
 });
 
