@@ -32,6 +32,15 @@ function main_title_click() {
 // 방법
 // $(function(){  })
 document.addEventListener("DOMContentLoaded", function () {
+  const btn_new = document.querySelector("#btn-new");
+  btn_new.addEventListener("click", function () {
+    // todo_data는 string serialize 된 상태이므로
+    // 이 값에서 데이터를 추출하기 위해 다시 json 객체로 변환하는 작업
+    alert(JSON.parse(todo_data).todo);
+
+    localStorage.setItem("todo_data", todo_data);
+  });
+
   // id가 todo인 tag를 todo라는 변수에 저장하라
   // todo는 id가 todo인 document object가 된다.
   let todo = document.getElementById("todo");
